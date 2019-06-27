@@ -13,6 +13,13 @@ $("#start").on("click", function(){
     startGame();
 });
 
+var currentQuestion;
+var numCorrectAnswer;
+var numIncorrectAnswer;
+var notAnswer;
 function startGame(){
-    
+    currentQuestion = 0;
+    numCorrectAnswer = 0;
+    numIncorrectAnswer = 0;
+    notAnswer = 0;
 }
