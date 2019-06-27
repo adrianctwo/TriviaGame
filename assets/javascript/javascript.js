@@ -8,3 +8,11 @@ var Questions = [{
     answer: 3
 }]
 
+$("#start").on("click", function(){
+    $(this).hide();
+    startGame();
+});
+
+function startGame(){
+    
+}
