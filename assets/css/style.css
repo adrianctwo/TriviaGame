@@ -1,0 +1,36 @@
+.text-center {
+    background-image:url("../images/banner\ 2.jpg");
+    background-size:cover;
+    background-size: no-repeat;
+}
+
+.jumbotron {
+    background-image: url("../images/Simple-Background-Images-25.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-bottom: 0px;
+    height: 700px;
+    width: 750px;
+    color: white;
+    font-size: 26px;
+}
+
+#start {
+    font-size: 26px;
+    color: white;
+}
+
+.choice {
+    background: white;
+    color: purple;
+    margin: 10px 0px;
+}
+
+.footers {
+    text-align: center;
+    color: white;
+    background-image: url("../images/footer.jpg");
+    margin: 0;
+    padding: 20px;
+}

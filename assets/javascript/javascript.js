@@ -1,12 +1,44 @@
 var lolQuestions = [{
-    question: "What is your name?",
-    multipleChoice: ["A", "B", "C" , "D"],
+    question: "Lifeform Disintegration Ray",
+    multipleChoice: ["Vel'Koz", "Malzahar", "Lux" , "Zed"],
     answerKey: 0
 },{
-    question: "What is your last name?",
-    multipleChoice: ["S", "D", "A", "K"],
+    question: "Last Breath",
+    multipleChoice: ["Warwick", "Yasuo", "Vayne", "Lee Sin"],
+    answerKey: 1
+},{
+    question: "The Quickness",
+    multipleChoice: ["Kennen", "Corki", "Rakan", "Ekko"],
+    answerKey: 2
+},{
+    question: "Static Field",
+    multipleChoice: ["Blitzcrank", "Kennen", "Zoe", "Sona"],
     answerKey: 0
-}]
+},{
+    question: "The Culling",
+    multipleChoice: ["Varus", "Lux", "Kog'Maw", "Lucian"],
+    answerKey: 3
+},{
+    question: "Lamb's Respite",
+    multipleChoice: ["Gnar", "Nami", "Kindred", "Twitch"],
+    answerKey: 2
+},{
+    question: "Lunar Rush",
+    multipleChoice: ["Lux", "Diana", "Leona", "Syndra"],
+    answerKey: 1
+},{
+    question: "Thrill of the Hunt",
+    multipleChoice: ["Rengar", "Kha'Zix", "Riven", "Sion"],
+    answerKey: 0
+},{
+    question: "Monsoon",
+    multipleChoice: ["Nami", "Akali", "Jana", "Kayle"],
+    answerKey: 2
+},{
+    question: "Death From Below",
+    multipleChoice: ["Renekton", "Camille", "Thresh", "Pyke"],
+    answerKey: 3
+},]
 
 $("#start").on("click", function(){
 	$(this).hide();
@@ -41,12 +73,12 @@ var time;
 var answered; 
 function newQuestion(){
 	$("#message").empty();
-	$("#correctedAnswer").empty();
+	$("#actualAnswer").empty();
 	answered = true;
 	
 	//sets up new questions & answerList
-	$("#currentQuestion").html("Question #" + (currentQuestion+1) + "/" + lolQuestions.length);
-	$(".question").html("<p>" + lolQuestions[currentQuestion].question + "</p>");
+	$("#currentQuestion").html("Question # " + (currentQuestion+1) + " out of " + lolQuestions.length);
+	$(".question").html("<p>Which champion has this ultimate:<br>" + lolQuestions[currentQuestion].question + "</p>");
 	for(var i = 0; i < 4; i++){
 		var multipleChoices = $("<div>");
         multipleChoices.text(lolQuestions[currentQuestion].multipleChoice[i]);
